@@ -1,10 +1,10 @@
-module github.com/steambap/captcha/example/load-font
+module github.com/bhmj/captcha/example/load-font
 
 go 1.12
 
-replace github.com/steambap/captcha => ../../
+replace github.com/bhmj/captcha => ../../
 
 require (
-	github.com/steambap/captcha v0.0.0-00010101000000-000000000000
-	golang.org/x/image v0.0.0-20190507092727-e4e5bf290fec
+	github.com/bhmj/captcha
+	golang.org/x/image
 )

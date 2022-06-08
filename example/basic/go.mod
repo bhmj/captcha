@@ -1,7 +1,6 @@
-module github.com/steambap/captcha/example/basic
+module github.com/bhmj/captcha/example/basic
 
-go 1.12
+go 1.17
 
-replace github.com/steambap/captcha => ../../
+replace github.com/bhmj/captcha => ../../
 
-require github.com/steambap/captcha v0.0.0-00010101000000-000000000000

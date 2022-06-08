@@ -1,4 +1,4 @@
-module github.com/steambap/captcha
+module github.com/bhmj/captcha
 
 go 1.16
 

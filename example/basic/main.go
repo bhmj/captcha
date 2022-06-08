@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/steambap/captcha"
+	"github.com/bhmj/captcha"
 )
 
 func main() {
