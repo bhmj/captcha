@@ -47,9 +47,8 @@ type Options struct {
 	// FontScale controls the scale of font.
 	// The default is 1.0.
 	FontScale float64
-	// Noise controls the number of noise drawn.
-	// A noise dot is drawn for every 28 pixel by default.
-	// The default is 1.0.
+	// Noise is the percent of the background set to a random color.
+	// The default is 3.0.
 	Noise float64
 	// Palette is the set of colors to chose from
 	Palette color.Palette
@@ -66,7 +65,7 @@ func newDefaultOption(width, height int) *Options {
 		CurveNumber:     2,
 		FontDPI:         72.0,
 		FontScale:       1.0,
-		Noise:           1.0,
+		Noise:           3.0,
 		Palette:         []color.Color{},
 		width:           width,
 		height:          height,
@@ -178,7 +177,7 @@ func randomText(opts *Options) (text string) {
 }
 
 func drawNoise(img *image.NRGBA, opts *Options) {
-	noiseCount := (opts.width * opts.height) / int(28.0/opts.Noise)
+	noiseCount := int(float64(opts.width*opts.height) * opts.Noise / 100)
 	for i := 0; i < noiseCount; i++ {
 		x := rand.Intn(opts.width)
 		y := rand.Intn(opts.height)
